@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Counter from './components/Counter';
 import CounterHooks from './components/CounterHooks';
 import FormHooks from './components/FormHooks';
+import Character from './components/Character';
 import './App.css';
 
 function App() {
+  const [characterId, setCharacterId] = useState(1);
+  const nextCharacter = () => setCharacterId(characterId + 1);
   return (
     <div className="App">
       <header className="App-header">
@@ -12,8 +15,10 @@ function App() {
       </header>
 
       {/* <Counter /> */}
-      <CounterHooks />
-      <FormHooks />
+      {/* <CounterHooks />
+      <FormHooks /> */}
+      <Character characterId={characterId} />
+      <button type="button" onClick={nextCharacter}>Next character</button>
     </div>
   );
 }
