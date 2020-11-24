@@ -17,8 +17,9 @@ function App() {
       {/* <Counter /> */}
       {/* <CounterHooks />
       <FormHooks /> */}
-      <Character characterId={characterId} />
+
       <button type="button" onClick={nextCharacter}>Next character</button>
+      { (characterId < 3) && <Character characterId={characterId} /> }
     </div>
   );
 }

@@ -14,6 +14,8 @@ class Counter extends Component {
 
   render() {
     const { count } = this.state;
+    // INTERDIT
+    // const [count, setCount] = useState(0);
     return (
       <button type="button" onClick={this.incrementCounter}>
         {count}
